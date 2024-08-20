@@ -1,0 +1,100 @@
+:root {
+    --primary-color: 0, 0%, 8%;
+    --secondary-color: 0, 0%, 90%;
+    --accent-color1: 0, 0%, 8%;
+    --ff: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --h1: bold 3.375rem/1.2 var(--ff);
+    --h2: bold 2.8125rem/1.2 var(--ff);
+    --h3: bold 2.3125rem/1.2 var(--ff);
+    --h4: bold 1.9375rem/1.2 var(--ff);
+    --h5: bold 1.625rem/1.2 var(--ff);
+    --h6: bold 1.375rem/1.2 var(--ff);
+    --p: normal 1.125rem/1.5 var(--ff);
+    /*
+    --h1: 3.375rem = 54px
+    --h2: 2.8125rem = 45px
+    --h3: 2.3125rem = 37px
+    --h4: 1.9375rem = 31px
+    --h5: 1.625rem = 26px
+    --h6: 1.375rem = 22px
+    --p: 1.125rem = 18px
+    */
+    --margin-xxs: .25rem;
+    --margin-xs: .5rem;
+    --margin-s: .75rem;
+    --margin-m: 1rem;
+    --margin-l: 1.25rem;
+    --margin-xl: 1.75rem;
+    --margin-xxl: 2.5rem;
+    /*
+    --margin-xxs: 0.25rem = 4px
+    --margin-xs: 0.5rem = 8px
+    --margin-s: 0.75rem = 12px
+    --margin-m: 1rem = 16px
+    --margin-l: 1.25rem = 20px
+    --margin-xl: 1.75rem = 28px
+    --margin-xxl: 2.5rem = 40px
+    */
+
+    --nav-bar-item-gap: 2rem;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    color: hsl(var(--secondary-color));
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(var(--primary-color));
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1 { font: var(--h1); }
+h2 { font: var(--h2); }
+h3 { font: var(--h3); }
+h4 { font: var(--h4); }
+h5 { font: var(--h5); }
+h6 { font: var(--h6); }
+p { font: var(--p); }
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.header {
+    display: flex;
+}
+
+.logo {
+    margin-right: auto;
+    margin-left: var(--margin-xl);
+    margin-top: var(--margin-xs);
+    white-space: nowrap;
+}
+
+.nav-bar {
+    display: flex;
+    gap: var(--nav-bar-item-gap);
+    flex-wrap: wrap;
+    justify-content: end;
+    margin-right: var(--margin-xl);
+    margin-top: var(--margin-xs);
+}
+
+.nav-bar-item, .logo {
+    font: var(--h5);
+}
+
+.intro h1 {
+    width: 20ch;
+}
+.intro p {
+    width: 60ch; /* This sets the maximum width of the container to 50 characters */
+}
