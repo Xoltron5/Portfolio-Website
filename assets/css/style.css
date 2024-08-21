@@ -37,6 +37,8 @@
     */
 
     --nav-bar-item-gap: 2rem;
+    --main-top-margin: 9.375rem;
+    --gap-between-flex-items: 1.5rem;
 }
 
 *, *::before, *::after {
@@ -64,8 +66,8 @@ h6 { font: var(--h6); }
 p { font: var(--p); }
 
 h1, h2, h3, h4, h5, h6, p {
-    margin-top: .5rem;
-    margin-bottom: .5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .header {
@@ -75,26 +77,49 @@ h1, h2, h3, h4, h5, h6, p {
 .logo {
     margin-right: auto;
     margin-left: var(--margin-xl);
-    margin-top: var(--margin-xs);
+    margin-top: var(--margin-s);
     white-space: nowrap;
 }
 
-.nav-bar {
+.nav-bar ul {
     display: flex;
     gap: var(--nav-bar-item-gap);
     flex-wrap: wrap;
     justify-content: end;
     margin-right: var(--margin-xl);
-    margin-top: var(--margin-xs);
+    margin-top: var(--margin-s);
+    list-style-type: none;
 }
 
 .nav-bar-item, .logo {
     font: var(--h5);
 }
 
-.intro h1 {
-    width: 20ch;
+.main {
+    margin-inline: 2.5rem;
+    margin-top: var(--main-top-margin);
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    justify-content: center;
+    align-items: center;
 }
-.intro p {
-    width: 60ch; /* This sets the maximum width of the container to 50 characters */
+
+.intro-links {
+    display: flex;
+    gap: var(--gap-between-flex-items);
+}
+
+.intro-links img {
+    width: 3.125rem;
+}
+
+.tech-i-use-container {
+    display: flex;
+    gap: var(--gap-between-flex-items);
+    flex-wrap: wrap;
+}
+
+.tech-i-use-container img {
+    width: 4.6875rem;
 }
