@@ -43,6 +43,7 @@
     --main-top-margin: 9.375rem;
     --gap-between-flex-items: 1.5rem;
     --gap-between-grid-items: 1.5rem;
+    --project-container-size: 35rem;
 }
 
 *, *::before, *::after {
@@ -140,23 +141,54 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .about-me {
-    margin-top: 14rem;
+    margin-top: 12rem;
     display: flex;
     gap: var(--gap-between-flex-items);
     flex-wrap: wrap;
 }
 
 .about-me-image {
-    max-width: 25rem;
+    width: 25rem;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+}
+
+.about-me-image, .project-image {
     border-radius: var(--border-radius);
 }
 
-.about-me-header {
+.about-me-header, .project-header {
     color: hsl(var(--accent-color2));
 }
 
 .about-me-desc {
     max-width: 40rem;
+}
+
+.portfolio-header {
+    margin-top: 12rem;
+}
+
+.portfolio-project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap-between-flex-items);
+}
+
+.project-image {
+    width: var(--project-container-size);
+}
+
+.project-desc {
+    max-width: var(--project-container-size);
+}
+
+.project-tech-used-container {
+    gap: 5rem;
+    justify-content: center;
+}
+
+.project-tech-used-container img {
+    width: 3.125rem;
 }
