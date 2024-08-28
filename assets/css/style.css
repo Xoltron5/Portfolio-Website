@@ -3,6 +3,7 @@
     --secondary-color: 0, 0%, 90%;
     --accent-color1: 0, 0%, 8%;
     --accent-color2: 205, 90%, 48%;
+    --footer-color: 0, 0%, 6%;
     --ff: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --h1: bold 3.375rem/1.2 var(--ff);
     --h2: bold 2.8125rem/1.2 var(--ff);
@@ -11,6 +12,7 @@
     --h5: bold 1.625rem/1.2 var(--ff);
     --h6: bold 1.375rem/1.2 var(--ff);
     --p: normal 1.125rem/1.5 var(--ff);
+    --small: normal 0.9375rem/1.5 var(--ff);
     --transition: 0.3s ease-in-out;
     --border-radius: 1.6rem;
     /*
@@ -62,6 +64,10 @@ img {
     max-width: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
 h1 { font: var(--h1); }
 h2 { font: var(--h2); }
 h3 { font: var(--h3); }
@@ -69,12 +75,17 @@ h4 { font: var(--h4); }
 h5 { font: var(--h5); }
 h6 { font: var(--h6); }
 p { font: var(--p); }
+small { font: var(--small); }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
+p, small {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
 .header {
     display: flex;
 }
@@ -166,7 +177,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .portfolio-header {
-    margin-top: 12rem;
+    margin-top: 5rem;
 }
 
 .portfolio-project {
@@ -174,13 +185,17 @@ h1, h2, h3, h4, h5, h6, p {
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--gap-between-flex-items);
+    border: 2px solid hotpink;
 }
 
 .project-image {
     width: var(--project-container-size);
 }
 
-.project-desc {
+.project-container {
+    display: flex;
+    gap: var(--gap-between-flex-items);
+    flex-direction: column;
     max-width: var(--project-container-size);
 }
 
@@ -191,4 +206,58 @@ h1, h2, h3, h4, h5, h6, p {
 
 .project-tech-used-container img {
     width: 3.125rem;
+}
+
+.portfolio-project-container {
+    border: 2px solid rebeccapurple;
+}
+
+.project-links {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    border: 2px solid firebrick;
+}
+
+.project-links img {
+    width: 3.4375rem;
+}
+
+.contact-container {
+    margin-top: 3.5rem;
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.contact-box {
+    display: flex;
+    gap: var(--gap-between-flex-items);
+    align-items: center;
+}
+
+.contact-box h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.contact-box img {
+    width: 4.6875rem;
+}
+
+.contact-details {
+    transition: var(--transition);
+}
+
+.contact-details:hover {
+    color: hsl(var(--accent-color2));
+}
+
+#footer {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--footer-color));
+    flex: 1;
 }
