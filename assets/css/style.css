@@ -1,3 +1,4 @@
+@import url("hamburger-menu.css");
 :root {
     --primary-color: 0, 0%, 8%;
     --secondary-color: 0, 0%, 90%;
@@ -44,11 +45,9 @@
 
     --nav-bar-item-gap: 2rem;
     --gap-between-flex-items: 1.5rem;
-    --gap-between-grid-items: 1.5rem;
+    --gap-between-grid-items: 10rem;
     --project-container-size: 35rem;
-
-    --grid-marign-between-items: 10rem;
-
+    --margin-header: 3.5rem;
 }
 
 *, *::before, *::after {
@@ -56,6 +55,13 @@
     padding: 0;
     color: hsl(var(--secondary-color));
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: var(--ff);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -67,10 +73,6 @@ img {
     max-width: 100%;
 }
 
-a {
-    text-decoration: none;
-}
-
 h1 { font: var(--h1); }
 h2 { font: var(--h2); }
 h3 { font: var(--h3); }
@@ -80,15 +82,11 @@ h6 { font: var(--h6); }
 p { font: var(--p); }
 small { font: var(--small); }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p, small {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
-p, small {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
 .header {
     background-color: hsl(var(--header-color));
     display: flex;
@@ -114,30 +112,31 @@ p, small {
     list-style-type: none;
 }
 
-.nav-bar-item, .logo {
+.nav-bar-item a, .logo {
     font: var(--h5);
 }
 
-.nav-bar-item {
+.nav-bar-item a {
     transition: var(--transition);
 }
 
-.nav-bar-item:hover {
+.nav-bar-item a:hover {
     color: hsl(var(--accent-color2));
     cursor: pointer;
 }
 
 .main {
     margin-inline: 2.5rem;
-    margin-top: var(--grid-marign-between-items);
+    margin-top: var(--gap-between-grid-items);
     display: grid;
-    gap: var(--grid-marign-between-items);
+    gap: var(--gap-between-grid-items);
     justify-content: center;
 }
 
 .intro-links {
     display: flex;
     gap: var(--gap-between-flex-items);
+    margin-top: 1rem;
 }
 
 .intro-container {
@@ -159,10 +158,10 @@ p, small {
 }
 
 .about-me {
-    margin-top: var(--grid-marign-between-items);
+    scroll-margin-top: 100px;
+    margin-top: var(--gap-between-grid-items);
     display: flex;
     gap: var(--gap-between-flex-items);
-    flex-wrap: wrap;
 }
 
 .about-me-image {
@@ -185,10 +184,16 @@ p, small {
 
 .portfolio-project {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: var(--gap-between-flex-items);
-    border: 2px solid hotpink;
+}
+
+.portfolio-top {
+    scroll-margin-top: 100px;
+}
+
+.portfolio-header {
+    margin-bottom: var(--margin-header);
 }
 
 .project-image {
@@ -211,15 +216,10 @@ p, small {
     width: 3.125rem;
 }
 
-.portfolio-project-container {
-    border: 2px solid rebeccapurple;
-}
-
 .project-links {
     display: flex;
     gap: 5rem;
     justify-content: center;
-    border: 2px solid firebrick;
 }
 
 .project-links img {
@@ -227,10 +227,10 @@ p, small {
 }
 
 .contact-container {
-    margin-top: 3.5rem;
+    margin-top: var(--margin-header);
     display: flex;
-    gap: 5rem;
     flex-wrap: wrap;
+    gap: 5rem;
 }
 
 .contact-box {
@@ -239,7 +239,7 @@ p, small {
     align-items: center;
 }
 
-.contact-box h6 {
+.contact-box h6, p {
     margin-top: 0;
     margin-bottom: 0.5rem;
 }
@@ -257,11 +257,32 @@ p, small {
 }
 
 #footer {
-    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: hsl(var(--footer-color));
- 
     flex: 1;
+}
+
+@media (max-width: 1120px) {
+    .about-me,.portfolio-project {
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 900px) {
+    .ham-menu, .off-screen-menu, .nav-bar2 {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav-bar {
+        display: none;
+    }
+    .ham-menu, .off-screen-menu, .nav-bar2 {
+        display: flex;
+    }
 }

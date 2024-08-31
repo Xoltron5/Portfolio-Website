@@ -1,0 +1,111 @@
+:root {
+    --hamburger-items-gap: 10rem;
+}
+
+.off-screen-menu {
+    background-color: hsl(var(--header-color));
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: var(--transition);
+}
+
+.off-screen-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-between-flex-items);
+}
+
+.off-screen-menu ul li a {
+    transition: color 0.3s ease; /* Smooth color transition for links */
+}
+
+.off-screen-menu ul li a:hover {
+    color: hsl(var(--accent-color2)); /* Change to your desired accent color on hover */
+}
+
+.off-screen-menu.active {
+    right: 0;
+}
+
+/* Navbar styles */
+.nav-bar2 {
+    display: flex;
+    background-color: hsl(var(--header-color));
+    padding: 0;
+    margin-right: var(--margin-xl);
+}
+
+/* Hamburger menu styles */
+.ham-menu {
+    cursor: pointer;
+    height: 50px;
+    width: 40px;
+    margin-left: auto;
+    position: relative;
+    transition: var(--transition);
+}
+
+.ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: hsl(var(--secondary-color)); /* Default color */
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color var(--transition); /* Smooth color transition */
+}
+
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+
+/* Hover effect for the entire ham-menu */
+.ham-menu:hover span {
+    background-color: hsl(var(--accent-color2)); /* Change to your desired hover color */
+}
+
+/* Active state for hamburger menu */
+.ham-menu.active span {
+    background-color: hsl(var(--secondary-color)); /* Ensure consistent color when active */
+    transition: background-color var(--transition); /* Smooth color transition when active */
+}
+
+.ham-menu.active:hover span {
+    background-color: hsl(var(--accent-color2)); /* Apply the same hover color when active */
+}
+
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Ensure the smooth transition is applied when hovering over the X shape */
+.ham-menu.active:hover span {
+    background-color: hsl(var(--accent-color2)); /* Change color on hover */
+    transition: background-color var(--transition); /* Smooth color transition */
+}

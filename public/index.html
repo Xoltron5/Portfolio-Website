@@ -11,20 +11,35 @@
         <header class="logo">Denis Bajgora</header>
         <nav class="nav-bar">
             <ul class="nav-bar-container">
-                <li class="nav-bar-item">Home</li>
-                <li class="nav-bar-item">About</li>
-                <li class="nav-bar-item">Projects</li>
-                <li class="nav-bar-item">Contact</li>
+                <li class="nav-bar-item"><a href="#">Home</a></li>
+                <li class="nav-bar-item"><a href="#aboutMe">About</a></li>
+                <li class="nav-bar-item"><a href="#projects">Projects</a></li>
+                <li class="nav-bar-item"><a href="#contact">Contact</a></li>
             </ul>
-        </nav>        
+        </nav>     
+        <div id="offScreenMenu" class="off-screen-menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#aboutMe">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <nav class="nav-bar2">
+            <div class="ham-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+        </nav> 
     </div>
     <div class="main">
         <div class="intro-container">
             <h1>Software & Web<br>Developer</h1>
-            <p>Hi, I'm Denis Smith, a developer who brings ideas to life with code,<br> specializing in both front-end and back-end development.</p>
+            <p>Hi, I'm Denis Bajgora, a developer who brings ideas to life with code,<br> specializing in both front-end and back-end development.</p>
             <div class="intro-links">
                 <a target="_blank" href="https://www.linkedin.com/in/denis-bajgora-1a4153324/"><img src="../assets/images/icons/Linkton Icon.png" alt="Linkton link"></a>
-                <a target="_blank" href="https://github.com/Xoltron5"><img src="../assets/images/icons/Github Icon.png" alt="Github link"></a>
+                <a target="_blank" href="https://github.com/denisbajgora5"><img src="../assets/images/icons/Github Icon.png" alt="Github link"></a>
             </div>
         </div>
         <div class="tech-i-use-container">
@@ -37,7 +52,7 @@
             <img src="../assets/images/icons/Java Icon.png" alt="Java Logo">
             <img src="../assets/images/icons/MySQL Icon.png" alt="MySQL Logo">
         </div>
-        <div class="about-me">
+        <div class="about-me" id="aboutMe">
             <img src="../assets/images/doMore.jpg" alt="" class="about-me-image">
             <div class="about-me-desc">
                 <h6 class="about-me-header">ABOUT ME</h6>
@@ -50,32 +65,33 @@
                 </p>
             </div>
         </div>
-
-        <div class="portfolio-header">
-            <h6 class="about-me-header">PORTFOLIO</h6>
-            <h5>Each project is a custom-crafted solution, built with precision and creativity.</h5>
-        </div>
-        <div class="portfolio-project">
-            <img src="../assets/images/projectImages/Ellipse Games.png" alt="" class="project-image">
-            <div class="project-container">
-                <div class="project-desc">
-                    <h6 class="project-header">Ellipse Games</h6>
-                    <p>
-                        Ellipse Games is your central hub for a seamless gaming experience.<br><br>
-                        Create an account, explore a diverse range of games, and purchase items to enhance your gameplay. <br><br>
-                        All your gaming needs are conveniently accessible in one place.
-                        
-                    </p>
-                </div>
-                <div class="tech-i-use-container project-tech-used-container">
-                    <img src="../assets/images/icons/CSS3 Icon.png" alt="CSS3 Logo">
-                    <img src="../assets/images/icons/Java Icon.png" alt="Java Logo">
-                    <img src="../assets/images/icons/MySQL Icon.png" alt="MySQL Logo">
-                </div>
-                <div class="intro-links project-links">
-                    <a target="_blank" href="https://github.com/Xoltron5/Ellipse-Games-Launcher"><img src="../assets/images/icons/Github Icon.png" alt="Github link"></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/denis-bajgora-1a4153324/"><img src="../assets/images/icons/Youtube Icon.png" alt="Youtube link"></a>
-                    <a target="_blank" href="https://github.com/Xoltron5"><img src="../assets/images/icons/Figma Icon.png" alt="Figma link"></a>
+        <div class="portfolio-top" id="projects">
+            <div class="portfolio-header">
+                <h6 class="about-me-header">PORTFOLIO</h6>
+                <h5>Each project is a custom-crafted solution, built with precision and creativity.</h5>
+            </div>
+            <div class="portfolio-project">
+                <img src="../assets/images/projectImages/Ellipse Games.png" alt="" class="project-image">
+                <div class="project-container">
+                    <div class="project-desc">
+                        <h6 class="project-header">Ellipse Games</h6>
+                        <p>
+                            Ellipse Games is your central hub for a seamless gaming experience.<br><br>
+                            Create an account, explore a diverse range of games, and purchase items to enhance your gameplay. <br><br>
+                            All your gaming needs are conveniently accessible in one place.
+                            
+                        </p>
+                    </div>
+                    <div class="tech-i-use-container project-tech-used-container">
+                        <img src="../assets/images/icons/CSS3 Icon.png" alt="CSS3 Logo">
+                        <img src="../assets/images/icons/Java Icon.png" alt="Java Logo">
+                        <img src="../assets/images/icons/MySQL Icon.png" alt="MySQL Logo">
+                    </div>
+                    <div class="intro-links project-links">
+                        <a target="_blank" href="https://github.com/Xoltron5/Ellipse-Games-Launcher"><img src="../assets/images/icons/Github Icon.png" alt="Github link"></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/denis-bajgora-1a4153324/"><img src="../assets/images/icons/Youtube Icon.png" alt="Youtube link"></a>
+                        <a target="_blank" href="https://github.com/Xoltron5"><img src="../assets/images/icons/Figma Icon.png" alt="Figma link"></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -162,17 +178,10 @@
                 </div>
             </div>
         </div>
-        <div class="portfolio-header contact-header">
+        <div class="portfolio-header contact-header" id="contact">
             <h6 class="about-me-header">CONTACT</h6>
             <h5>Lets Connect!</h5>
             <div class="contact-container">
-                <div class="contact-box">
-                    <img src="../assets/images/icons/Discord Icon.png" alt="Discord link"></a>
-                    <div class="contact-info">
-                        <h6 class="contact-title">Discord</h6>
-                        <a target="_blank" href=""><p class="contact-details">Xoltron</p></a>
-                    </div>
-                </div>
                 <div class="contact-box">
                     <img src="../assets/images/icons/Linkton Icon.png" alt="Linkton link"></a>
                     <div class="contact-info">
@@ -184,12 +193,13 @@
                     <img src="../assets/images/icons/Envelope Icon.png" alt="Email link"></a>
                     <div class="contact-info">
                         <h6 class="contact-titles">Email</h6>
-                        <a target="_blank" href="mailto:altstarv@gmail.com"><p class="contact-details">altstarv@gmail.com</p></a>
+                        <a target="_blank" href="mailto:denisbajgora3@gmail.com"><p class="contact-details">denisbajgora3@gmail.com</p></a>
                     </div>
                 </div>
             </div>            
         </div>
     </div>
     <footer id="footer"><h6>Copyright © 2024. All rights are reserved</h6></footer>
+    <script src="../assets/js/hamburger-menu.js"></script>
 </body>
 </html>
