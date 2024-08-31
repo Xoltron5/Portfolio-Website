@@ -3,6 +3,7 @@
     --secondary-color: 0, 0%, 90%;
     --accent-color1: 0, 0%, 8%;
     --accent-color2: 205, 90%, 48%;
+    --header-color: 0, 0%, 7.5%;
     --footer-color: 0, 0%, 6%;
     --ff: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --h1: bold 3.375rem/1.2 var(--ff);
@@ -42,10 +43,12 @@
     */
 
     --nav-bar-item-gap: 2rem;
-    --main-top-margin: 9.375rem;
     --gap-between-flex-items: 1.5rem;
     --gap-between-grid-items: 1.5rem;
     --project-container-size: 35rem;
+
+    --grid-marign-between-items: 10rem;
+
 }
 
 *, *::before, *::after {
@@ -87,13 +90,18 @@ p, small {
     margin-bottom: 0.5rem;
 }
 .header {
+    background-color: hsl(var(--header-color));
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    position: sticky;
+    top: 0;
 }
 
 .logo {
     margin-right: auto;
     margin-left: var(--margin-xl);
-    margin-top: var(--margin-s);
     white-space: nowrap;
 }
 
@@ -103,7 +111,6 @@ p, small {
     flex-wrap: wrap;
     justify-content: end;
     margin-right: var(--margin-xl);
-    margin-top: var(--margin-s);
     list-style-type: none;
 }
 
@@ -122,9 +129,9 @@ p, small {
 
 .main {
     margin-inline: 2.5rem;
-    margin-top: var(--main-top-margin);
+    margin-top: var(--grid-marign-between-items);
     display: grid;
-    gap: 10rem;
+    gap: var(--grid-marign-between-items);
     justify-content: center;
 }
 
@@ -152,7 +159,7 @@ p, small {
 }
 
 .about-me {
-    margin-top: 12rem;
+    margin-top: var(--grid-marign-between-items);
     display: flex;
     gap: var(--gap-between-flex-items);
     flex-wrap: wrap;
@@ -174,10 +181,6 @@ p, small {
 
 .about-me-desc {
     max-width: 40rem;
-}
-
-.portfolio-header {
-    margin-top: 5rem;
 }
 
 .portfolio-project {
@@ -259,5 +262,6 @@ p, small {
     justify-content: center;
     align-items: center;
     background-color: hsl(var(--footer-color));
+ 
     flex: 1;
 }
